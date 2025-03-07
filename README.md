@@ -1,3 +1,4 @@
+# date 7.03.25
 # GitHub Actions Fundamentals
 
 Repo for the `GitHub Actions Fundamentals` training.
