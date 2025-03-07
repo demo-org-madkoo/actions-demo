@@ -1,0 +1,11 @@
+{
+  "name": "demo codespace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "extensions": [
+    "GitHub.copilot",
+    "github.copilot-chat"
+  ],
+  "features": {
+    "ghcr.io/devcontainers-extra/features/actionlint:1": {}
+}
+}
