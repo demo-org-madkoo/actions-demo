@@ -1,6 +1,7 @@
 
 # GitHub Actions Fundamentals
 ## date 7.03.25
+Do a pull request commit
 Repo for the `GitHub Actions Fundamentals` training.
 
 ## 👉 Objectives
