@@ -1,0 +1,19 @@
+name: Demo docker action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo-docker-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run Docker action
+        uses: ./.github/actions/docker-action
+        id: docker-action
+        with:
+          who-to-greet: "Mona" 
+
+      - name: get output
+        run: echo "The the was ${{ steps.docker-action.outputs.time }} when the action said hello"
