@@ -5,10 +5,9 @@ on:
 
 jobs:
   call-reusable-workflow:
-    - name: Call the reusable workflow
-      uses: ./.github/workflows/reusable.yml
-      with:
-        who-to-greet: 'Madkoo'
+    uses: ./.github/workflows/reusable.yml
+    with:
+      who-to-greet: 'Madkoo'
 
   use-outputs:
     runs-on: ubuntu-latest
