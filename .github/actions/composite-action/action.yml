@@ -23,3 +23,4 @@ runs:
     - name: Set greeting output
       id: greeting
       run: echo "greeting_msg=Hello, ${{ inputs.my_name }}!" >> $GITHUB_OUTPUT
+      shell: bash
