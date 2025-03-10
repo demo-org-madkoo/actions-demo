@@ -4,6 +4,7 @@ on:
   workflow_call:
     inputs:
       who-to-greet: # Define the input parameter
+        type: string
         description: 'Who to greet'
         required: true
         default: 'World'
