@@ -1,0 +1,25 @@
+name: Demo composite action
+description: 'Demo composite action'
+inputs:
+  my_name:
+    description: 'My name'
+    type: string
+    required: true
+    default: 'World'
+
+outputs:
+  greeting_msg:
+    description: 'Greeting message'
+    value: ${{ steps.greeting.outputs.greeting_msg }}
+
+
+runs:
+  using: "composite"
+  steps:
+    - name: Print greeting
+      run: echo "Hello, ${{ inputs.my_name }}!"
+      shell: bash
+    
+    - name: Set greeting output
+      id: greeting
+      run: echo "greeting_msg=Hello, ${{ inputs.my_name }}!" >> $GITHUB_OUTPUT

@@ -1,0 +1,16 @@
+name: Demo composite action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo-composite-action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: run demo action
+        uses: ./.github/actions/composite-action
+        with:
+          my_name: 'madkoo'
