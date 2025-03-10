@@ -12,5 +12,9 @@ jobs:
 
       - name: run demo action
         uses: ./.github/actions/composite-action
+        id: demo-action
         with:
           my_name: 'madkoo'
+          
+      - name: get output
+        run: echo "${{ steps.demo-action.outputs.greeting_msg }}"
